@@ -7,10 +7,97 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Previous HTML content remains the same -->
-    
-    <!-- Replace inline script with external script -->
+<body class="bg-gray-100">
+    <!-- Cursor Follow Effect -->
+    <div class="cursor-follow"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-[#222629] text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Portfolio</div>
+            <div>
+                <a href="#home" class="mx-2 hover:text-[#87c232] nav-link">Home</a>
+                <a href="#about" class="mx-2 hover:text-[#87c232] nav-link">About</a>
+                <a href="#projects" class="mx-2 hover:text-[#87c232] nav-link">Projects</a>
+                <a href="#contact" class="mx-2 hover:text-[#87c232] nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="bg-[#618930] text-white text-center py-20 pt-32 scroll-reveal">
+        <div class="container mx-auto">
+            <img src="images/profile.png" alt="Profile" class="mx-auto rounded-full mb-6 animate-pulse">
+            <h1 class="text-4xl font-bold mb-4 animate-fade-in">Placeholder Name</h1>
+            <p class="text-xl animate-slide-in">Placeholder Profession</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-[#474a4f] text-white py-16 scroll-reveal">
+        <div class="container mx-auto flex items-center">
+            <div class="w-1/2 pr-8">
+                <img src="images/about.png" alt="About" class="rounded-lg image-parallax">
+            </div>
+            <div class="w-1/2">
+                <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                <p class="mb-4">Placeholder text about professional background and skills.</p>
+                <p>More placeholder text about personal interests and experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-[#6a6e70] text-white py-16 scroll-reveal">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="project-card bg-[#222629] p-6 rounded-lg">
+                    <img src="images/project1.png" alt="Project 1" class="mb-4 rounded w-full">
+                    <div class="project-overlay">
+                        <h3 class="text-xl font-bold mb-2">Project 1</h3>
+                        <p class="text-center">Placeholder description of project 1.</p>
+                        <a href="#" class="mt-4 bg-[#87c232] px-4 py-2 rounded">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card bg-[#222629] p-6 rounded-lg">
+                    <img src="images/project2.png" alt="Project 2" class="mb-4 rounded w-full">
+                    <div class="project-overlay">
+                        <h3 class="text-xl font-bold mb-2">Project 2</h3>
+                        <p class="text-center">Placeholder description of project 2.</p>
+                        <a href="#" class="mt-4 bg-[#87c232] px-4 py-2 rounded">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card bg-[#222629] p-6 rounded-lg">
+                    <img src="images/project3.png" alt="Project 3" class="mb-4 rounded w-full">
+                    <div class="project-overlay">
+                        <h3 class="text-xl font-bold mb-2">Project 3</h3>
+                        <p class="text-center">Placeholder description of project 3.</p>
+                        <a href="#" class="mt-4 bg-[#87c232] px-4 py-2 rounded">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#618930] text-white py-16 scroll-reveal">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+            <form class="max-w-md mx-auto">
+                <input type="text" placeholder="Name" class="w-full p-3 mb-4 bg-[#87c232] text-white rounded">
+                <input type="email" placeholder="Email" class="w-full p-3 mb-4 bg-[#87c232] text-white rounded">
+                <textarea placeholder="Message" class="w-full p-3 mb-4 bg-[#87c232] text-white rounded" rows="4"></textarea>
+                <button class="bg-[#222629] px-8 py-3 rounded hover:bg-[#474a4f]">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#222629] text-white py-6 text-center">
+        <p>&copy; 2025 Placeholder Name. All Rights Reserved.</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
