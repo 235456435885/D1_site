@@ -5,65 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #222629 !important; }
+        .bg-custom-dark { background-color: #222629 !important; }
+        .bg-custom-gray { background-color: #474a4f !important; }
+        .bg-custom-light-gray { background-color: #6a6e70 !important; }
+        .bg-custom-green { background-color: #87c232 !important; }
+        .bg-custom-dark-green { background-color: #618930 !important; }
+        .text-white { color: #ffffff !important; }
+    </style>
 </head>
-<body class="bg-[#222629]">
-    <div id="login-section" class="min-h-screen flex items-center justify-center bg-[#222629]">
-        <div class="bg-[#474a4f] p-8 rounded-lg shadow-lg w-96">
+<body class="bg-custom-dark">
+    <div id="login-section" class="min-h-screen flex items-center justify-center bg-custom-dark">
+        <div class="bg-custom-gray p-8 rounded-lg shadow-lg w-96">
             <h2 class="text-2xl font-bold text-white mb-6 text-center">Admin Login</h2>
             <form id="login-form" class="space-y-4">
-                <input type="text" id="username" placeholder="Username" class="w-full p-3 bg-[#6a6e70] text-white rounded placeholder-gray-300" required>
-                <input type="password" id="password" placeholder="Password" class="w-full p-3 bg-[#6a6e70] text-white rounded placeholder-gray-300" required>
-                <button type="submit" class="w-full bg-[#87c232] text-white p-3 rounded hover:bg-[#618930] transition duration-300">Login</button>
+                <input type="text" id="username" placeholder="Username" class="w-full p-3 bg-custom-light-gray text-white rounded placeholder-gray-300" required>
+                <input type="password" id="password" placeholder="Password" class="w-full p-3 bg-custom-light-gray text-white rounded placeholder-gray-300" required>
+                <button type="submit" class="w-full bg-custom-green text-white p-3 rounded hover:bg-custom-dark-green transition duration-300">Login</button>
             </form>
         </div>
     </div>
 
     <div id="admin-section" class="hidden container mx-auto mt-10">
-        <div class="bg-[#474a4f] shadow-md rounded-lg p-8">
+        <div class="bg-custom-gray shadow-md rounded-lg p-8">
             <h1 class="text-3xl font-bold mb-6 text-white">Website Content Management</h1>
             
             <div class="grid grid-cols-2 gap-8">
                 <!-- Home Section -->
-                <div class="bg-[#618930] text-white p-6 rounded-lg">
+                <div class="bg-custom-dark-green text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">Home Section</h2>
                     <input type="file" id="profile-image" class="mb-4">
-                    <input type="text" id="name" placeholder="Name" class="w-full p-2 mb-2 bg-[#87c232] rounded placeholder-gray-300">
-                    <input type="text" id="profession" placeholder="Profession" class="w-full p-2 bg-[#87c232] rounded placeholder-gray-300">
+                    <input type="text" id="name" placeholder="Name" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
+                    <input type="text" id="profession" placeholder="Profession" class="w-full p-2 bg-custom-green rounded placeholder-gray-300">
                 </div>
 
                 <!-- About Section -->
-                <div class="bg-[#6a6e70] text-white p-6 rounded-lg">
+                <div class="bg-custom-light-gray text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">About Section</h2>
                     <input type="file" id="about-image" class="mb-4">
-                    <textarea id="about-text" placeholder="About Me Text" class="w-full p-2 mb-2 bg-[#474a4f] rounded placeholder-gray-300" rows="4"></textarea>
+                    <textarea id="about-text" placeholder="About Me Text" class="w-full p-2 mb-2 bg-custom-gray rounded placeholder-gray-300" rows="4"></textarea>
                 </div>
 
                 <!-- Projects Section -->
-                <div class="bg-[#474a4f] text-white p-6 rounded-lg">
+                <div class="bg-custom-gray text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">Projects</h2>
                     <div id="projects-container">
                         <div class="mb-4">
                             <input type="file" class="project-image mb-2">
-                            <input type="text" class="project-name w-full p-2 mb-2 bg-[#6a6e70] rounded placeholder-gray-300" placeholder="Project Name">
-                            <textarea class="project-description w-full p-2 bg-[#6a6e70] rounded placeholder-gray-300" placeholder="Project Description" rows="3"></textarea>
+                            <input type="text" class="project-name w-full p-2 mb-2 bg-custom-light-gray rounded placeholder-gray-300" placeholder="Project Name">
+                            <textarea class="project-description w-full p-2 bg-custom-light-gray rounded placeholder-gray-300" placeholder="Project Description" rows="3"></textarea>
                         </div>
                     </div>
-                    <button id="add-project" class="bg-[#87c232] p-2 rounded mt-2 hover:bg-[#618930] transition duration-300">Add Project</button>
+                    <button id="add-project" class="bg-custom-green p-2 rounded mt-2 hover:bg-custom-dark-green transition duration-300">Add Project</button>
                 </div>
-
                 <!-- Contact Section -->
-                <div class="bg-[#618930] text-white p-6 rounded-lg">
+                <div class="bg-custom-dark-green text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
-                    <input type="text" id="contact-email" placeholder="Contact Email" class="w-full p-2 mb-2 bg-[#87c232] rounded placeholder-gray-300">
+                    <input type="text" id="contact-email" placeholder="Contact Email" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
                 </div>
             </div>
 
             <div class="mt-8 text-center">
-                <button id="save-changes" class="bg-[#87c232] text-white px-8 py-3 rounded hover:bg-[#618930] transition duration-300">Save Changes</button>
-                <button id="logout" class="bg-[#222629] text-white px-8 py-3 rounded ml-4 hover:bg-[#474a4f] transition duration-300">Logout</button>
+                <button id="save-changes" class="bg-custom-green text-white px-8 py-3 rounded hover:bg-custom-dark-green transition duration-300">Save Changes</button>
+                <button id="logout" class="bg-custom-dark text-white px-8 py-3 rounded ml-4 hover:bg-custom-gray transition duration-300">Logout</button>
             </div>
         </div>
     </div>
+
     <script src="/admin.js"></script>
 </body>
 </html>
