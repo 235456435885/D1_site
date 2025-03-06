@@ -15,21 +15,21 @@
         .text-white { color: #ffffff !important; }
     </style>
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
     <script>
         // Your Firebase configuration
-        var firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
+        const firebaseConfig = {
+            apiKey: "AIzaSyBrrz31FUmfVbiTzGpRcO-QySwbY9mgRmg",
+            authDomain: "d1-site.firebaseapp.com",
+            projectId: "d1-site",
+            storageBucket: "d1-site.firebasestorage.app",
+            messagingSenderId: "260758419103",
+            appId: "1:260758419103:web:9a58539f5b30fdde0f54aa"
         };
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        var db = firebase.firestore();
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore(app);
     </script>
 </head>
 <body class="bg-custom-dark">
@@ -63,4 +63,54 @@
                 <!-- About Section -->
                 <div class="bg-custom-light-gray text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">About Section</h2>
-                        document.getElementById('about-text
+                    <label class="block mb-2">About Image:</label>
+                    <input type="file" id="about-image" class="mb-4">
+                    <label class="block mb-2">About Me Text:</label>
+                    <textarea id="about-text" placeholder="About Me Text" class="w-full p-2 bg-custom-gray rounded placeholder-gray-300" rows="4"></textarea>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="bg-custom-gray text-white p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Projects</h2>
+                    <div id="projects-container">
+                        <div class="mb-4">
+                            <label class="block mb-2">Project Image:</label>
+                            <input type="file" class="project-image mb-2">
+                            <label class="block mb-2">Project Name:</label>
+                            <input type="text" class="project-name w-full p-2 mb-2 bg-custom-light-gray rounded placeholder-gray-300" placeholder="Project Name">
+                            <label class="block mb-2">Project Description:</label>
+                            <textarea class="project-description w-full p-2 bg-custom-light-gray rounded placeholder-gray-300" placeholder="Project Description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <button id="add-project" class="bg-custom-green p-2 rounded mt-2 hover:bg-custom-dark-green transition duration-300">Add Project</button>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="bg-custom-dark-green text-white p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+                    <label class="block mb-2">Contact Email:</label>
+                    <input type="text" id="contact-email" placeholder="Contact Email" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
+                </div>
+
+                <!-- Links Section -->
+                <div class="bg-custom-dark-green text-white p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Social Links</h2>
+                    <label class="block mb-2">GitHub Link:</label>
+                    <input type="text" id="github-link" placeholder="GitHub Link" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
+                    <label class="block mb-2">Telegram Link:</label>
+                    <input type="text" id="telegram-link" placeholder="Telegram Link" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
+                    <label class="block mb-2">Admin Panel Link:</label>
+                    <input type="text" id="admin-panel-link" placeholder="Admin Panel Link" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button id="save-changes" class="bg-custom-green text-white px-8 py-3 rounded hover:bg-custom-dark-green transition duration-300">Save Changes</button>
+                <button id="logout" class="bg-custom-dark text-white px-8 py-3 rounded ml-4 hover:bg-custom-gray transition duration-300">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
