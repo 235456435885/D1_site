@@ -90,9 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const projectDiv = document.createElement('div');
         projectDiv.classList.add('mb-4');
         projectDiv.innerHTML = `
+            <label class="block mb-2">Project Image:</label>
             <input type="file" class="project-image mb-2">
+            <label class="block mb-2">Project Name:</label>
             <input type="text" class="project-name w-full p-2 mb-2 bg-[#222629] rounded" 
                    placeholder="Project Name" value="${project.name || ''}">
+            <label class="block mb-2">Project Description:</label>
             <textarea class="project-description w-full p-2 bg-[#222629] rounded" 
                       placeholder="Project Description" rows="3">${project.description || ''}</textarea>
             ${index !== null ? `<button class="remove-project bg-red-500 text-white p-2 mt-2 rounded">Remove</button>` : ''}
