@@ -17,6 +17,23 @@
         .button-telegram { background-color: #0088cc !important; color: #fff !important; }
         .button-admin { background-color: #87c232 !important; color: #222629 !important; }
     </style>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        // Your Firebase configuration
+        var firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+    </script>
 </head>
 <body class="bg-custom-dark text-white">
     <header class="bg-custom-dark-green text-white p-4 text-center">
@@ -88,5 +105,56 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        // Function to load content from Firestore
+        function loadContent() {
+            db.collection("content").doc("home").get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    document.getElementById('profile-image').src = data.profileImage;
+                    document.getElementById('name').textContent = data.name;
+                    document.getElementById('profession').textContent = data.profession;
+                }
+            });
+            db.collection("content").doc("about").get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    document.getElementById('about-image').src = data.image;
+                    document.getElementById('about-text').textContent = data.text;
+                }
+            });
+            db.collection("content").doc("contact").get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    document.getElementById('contact-email').textContent = data.email;
+                }
+            });
+            db.collection("content").doc("socialLinks").get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    document.getElementById('github-link').href = data.github;
+                    document.getElementById('telegram-link').href = data.telegram;
+                    document.getElementById('admin-link').href = data.adminPanel;
+                }
+            });
+            db.collection("content").doc("projects").get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    const projectElements = document.querySelectorAll('#projects .grid > div');
+                    data.projects.forEach((project, index) => {
+                        if (projectElements[index]) {
+                            const projectElement = projectElements[index];
+                            projectElement.querySelector('img').src = project.image;
+                            projectElement.querySelector('h3').textContent = project.name;
+                            projectElement.querySelector('p').textContent = project.description;
+                        }
+                    });
+                }
+            });
+        }
+
+        // Load content when the page is loaded
+        document.addEventListener('DOMContentLoaded', loadContent);
+    </script>
 </body>
 </html>
