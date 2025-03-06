@@ -33,6 +33,11 @@ let contentData = {
     ],
     contact: {
         email: 'contact@example.com'
+    },
+    socialLinks: {
+        github: 'https://github.com',
+        telegram: 'https://telegram.org',
+        adminPanel: 'admin.html'
     }
 };
 
@@ -83,6 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Contact section
         document.getElementById('contact-email').value = contentData.contact.email;
+
+        // Social Links section
+        document.getElementById('github-link').value = contentData.socialLinks.github;
+        document.getElementById('telegram-link').value = contentData.socialLinks.telegram;
+        document.getElementById('admin-panel-link').value = contentData.socialLinks.adminPanel;
     }
 
     // Add project fields dynamically
@@ -136,6 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update contact section
         contentData.contact.email = document.getElementById('contact-email').value;
 
+        // Update social links
+        contentData.socialLinks.github = document.getElementById('github-link').value;
+        contentData.socialLinks.telegram = document.getElementById('telegram-link').value;
+        contentData.socialLinks.adminPanel = document.getElementById('admin-panel-link').value;
+
         // In a real implementation, you would send this data to a backend
         alert('Changes saved successfully!');
         updateMainSite();
@@ -153,12 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
         contentData.projects.forEach((project, index) => {
             if (projectElements[index]) {
                 const projectElement = projectElements[index];
-                projectElement.querySelector('h3').textContent = project.name;
-                projectElement.querySelector('p').textContent = project.description;
-            }
-        });
-
-        // Update contact email (if needed)
-        console.log('Site updated with new content');
-    }
-});
+                projectElement.querySelector('h3
