@@ -161,11 +161,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update about section
         const aboutTextElements = document.querySelectorAll('#about p');
         aboutTextElements[0].textContent = contentData.about.text;
-        aboutTextElements[1].textContent = contentData.about.text;
-
-        // Update projects section
-        const projectElements = document.querySelectorAll('#projects .grid > div');
-        contentData.projects.forEach((project, index) => {
-            if (projectElements[index]) {
-                const projectElement = projectElements[index];
-                projectElement.querySelector('h3
+        aboutTextElements[1].
