@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Function to update main site content (would typically be done via backend)
-// Continuation of the previous script
     function updateMainSite() {
         // Update about section
         const aboutTextElements = document.querySelectorAll('#about p');
