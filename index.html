@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #222629 !important; }
+        .bg-custom-dark { background-color: #222629 !important; }
+        .bg-custom-gray { background-color: #474a4f !important; }
+        .bg-custom-light-gray { background-color: #6a6e70 !important; }
+        .bg-custom-green { background-color: #87c232 !important; }
+        .bg-custom-dark-green { background-color: #618930 !important; }
+        .text-white { color: #ffffff !important; }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-600 text-white p-4 text-center">
+<body class="bg-custom-dark text-white">
+    <header class="bg-custom-dark-green text-white p-4 text-center">
         <h1 class="text-3xl font-bold">Welcome to My Website</h1>
     </header>
 
@@ -17,12 +26,12 @@
             <div class="text-center">
                 <img id="profile-image" class="mx-auto rounded-full" src="path/to/profile-image.jpg" alt="Profile Image" width="150">
                 <h2 id="name" class="text-2xl font-bold mt-4">Placeholder Name</h2>
-                <p id="profession" class="text-lg text-gray-600">Placeholder Profession</p>
+                <p id="profession" class="text-lg text-custom-light-gray">Placeholder Profession</p>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <section id="about" class="bg-custom-gray p-6 rounded-lg shadow-md mb-8">
             <div class="text-center">
                 <img id="about-image" class="mx-auto rounded-lg" src="path/to/about-image.jpg" alt="About Image" width="150">
                 <p id="about-text" class="mt-4">Placeholder text about professional background and skills.</p>
@@ -30,27 +39,27 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <section id="projects" class="bg-custom-gray p-6 rounded-lg shadow-md mb-8">
             <h2 class="text-2xl font-bold mb-4">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Example Project -->
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <div class="bg-custom-light-gray p-4 rounded-lg shadow-md">
                     <img class="w-full h-40 object-cover rounded-lg mb-4" src="path/to/project-image.jpg" alt="Project Image">
                     <h3 class="text-xl font-bold">Project 1</h3>
-                    <p class="text-gray-600">Placeholder description of project 1.</p>
+                    <p class="text-custom-dark">Placeholder description of project 1.</p>
                 </div>
                 <!-- Add more project elements here -->
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="bg-white p-6 rounded-lg shadow-md">
+        <section id="contact" class="bg-custom-dark-green text-white p-6 rounded-lg shadow-md">
             <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
             <p>Email: <span id="contact-email">contact@example.com</span></p>
         </section>
     </main>
 
-    <footer class="bg-blue-600 text-white p-4 text-center">
+    <footer class="bg-custom-dark-green text-white p-4 text-center">
         <p>&copy; 2025 My Website. All rights reserved.</p>
     </footer>
 </body>
