@@ -35,16 +35,21 @@
                 <!-- Home Section -->
                 <div class="bg-custom-dark-green text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">Home Section</h2>
+                    <label class="block mb-2">Profile Image:</label>
                     <input type="file" id="profile-image" class="mb-4">
+                    <label class="block mb-2">Name:</label>
                     <input type="text" id="name" placeholder="Name" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
+                    <label class="block mb-2">Profession:</label>
                     <input type="text" id="profession" placeholder="Profession" class="w-full p-2 bg-custom-green rounded placeholder-gray-300">
                 </div>
 
                 <!-- About Section -->
                 <div class="bg-custom-light-gray text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">About Section</h2>
+                    <label class="block mb-2">About Image:</label>
                     <input type="file" id="about-image" class="mb-4">
-                    <textarea id="about-text" placeholder="About Me Text" class="w-full p-2 mb-2 bg-custom-gray rounded placeholder-gray-300" rows="4"></textarea>
+                    <label class="block mb-2">About Me Text:</label>
+                    <textarea id="about-text" placeholder="About Me Text" class="w-full p-2 bg-custom-gray rounded placeholder-gray-300" rows="4"></textarea>
                 </div>
 
                 <!-- Projects Section -->
@@ -52,16 +57,21 @@
                     <h2 class="text-2xl font-bold mb-4">Projects</h2>
                     <div id="projects-container">
                         <div class="mb-4">
+                            <label class="block mb-2">Project Image:</label>
                             <input type="file" class="project-image mb-2">
+                            <label class="block mb-2">Project Name:</label>
                             <input type="text" class="project-name w-full p-2 mb-2 bg-custom-light-gray rounded placeholder-gray-300" placeholder="Project Name">
+                            <label class="block mb-2">Project Description:</label>
                             <textarea class="project-description w-full p-2 bg-custom-light-gray rounded placeholder-gray-300" placeholder="Project Description" rows="3"></textarea>
                         </div>
                     </div>
                     <button id="add-project" class="bg-custom-green p-2 rounded mt-2 hover:bg-custom-dark-green transition duration-300">Add Project</button>
                 </div>
+
                 <!-- Contact Section -->
                 <div class="bg-custom-dark-green text-white p-6 rounded-lg">
                     <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+                    <label class="block mb-2">Contact Email:</label>
                     <input type="text" id="contact-email" placeholder="Contact Email" class="w-full p-2 mb-2 bg-custom-green rounded placeholder-gray-300">
                 </div>
             </div>
@@ -73,6 +83,6 @@
         </div>
     </div>
 
-    <script src="/admin.js"></script>
+    <script src="admin.js"></script>
 </body>
 </html>
