@@ -158,7 +158,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update main site content (would typically be done via backend)
     function updateMainSite() {
+        // Update home section
+        document.getElementById('profile-image').src = contentData.home.profileImage || 'path/to/profile-image.jpg';
+        document.getElementById('name').textContent = contentData.home.name;
+        document.getElementById('profession').textContent = contentData.home.profession;
+
         // Update about section
-        const aboutTextElements = document.querySelectorAll('#about p');
-        aboutTextElements[0].textContent = contentData.about.text;
-        aboutTextElements[1].
+        document.getElementById('about-image').src = contentData.about.image || 'path/to/about-image.jpg';
+        document.getElementById('about-text').textContent = contentData.about.text;
+
+        // Update projects section
+        const projectElements = document.querySelectorAll('#projects .grid > div');
+        contentData.projects.forEach((project, index) => {
+            if (projectElements[index]) {
+                const projectElement = projectElements[index];
+                projectElement.querySelector('img').src = project.image || 'path/to/project-image.jpg';
+                projectElement.querySelector('h3').textContent = project.name;
+                projectElement.querySelector('p').textContent = project.description;
+            }
+        });
+
+        // Update social links
+        document.getElementById('github-link').href = contentData.socialLinks.github;
+        document.getElementById('telegram-link').href = contentData.socialLinks.telegram;
+        document.getElementById('admin-link').href = contentData.socialLinks.adminPanel;
+        
+        console.log('Site updated with new content');
+    }
+});
